@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Damascena</title>
+        <link rel="stylesheet" href="../css/estilos.css">
+    </head>
+    <body>
+        
+  <!-- HEADER -->
+<header class="header-fondo">
+  
+  <!-- Grupo de enlaces izquierda -->
+  <div class="nav-left">
+    <a href="../index.html">Inicio</a>
+    <a href="producto.html">Productos</a>
+  </div>
+
+  <!-- Logo central -->
+  <div class="logo">
+    <img src="https://en.damascenashop.net/wp-content/uploads/2022/04/logodamascenaen.png" alt="Logo Empresa" width="981" height="701">
+  </div>
+
+  <!-- Grupo de enlaces derecha -->
+  <div class="nav-right">
+    <a href="presupuesto.html">Presupuesto</a>
+    <a href="contacto.html">Contacto</a>
+  </div>
+
+</header>
+
+
+    </body>
+</html>
+
+
+<!-- PRESUPUESTO -->
+<section class="presupuesto-section">
+  <h1>¡Diseña tu infusión soñada! 🌸🌹</h1>
+  <p>¿Te gustaría mezclar diferentes sabores de infusiones? Cuéntanos tu idea y te prepararemos un presupuesto personalizado para tu combinación perfecta.</p>
+
+  <form>
+    <!-- Nombre -->
+    <input type="text" name="nombre" placeholder="Nombre" required 
+           pattern="[A-Za-zÀ-ÿ\s]{2,50}" 
+           title="Ingresa solo letras y espacios, entre 2 y 50 caracteres">
+
+    <!-- Email -->
+    <input type="email" name="email" placeholder="Email" required 
+           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+           title="Ingresa un email válido">
+
+    <!-- Teléfono -->
+    <input type="tel" name="telefono" placeholder="Teléfono" required 
+           pattern="[0-9]{9,15}" 
+           title="Ingresa solo números, entre 9 y 15 dígitos">
+
+    <!-- Información / Mezcla de sabores -->
+    <textarea name="informacion" rows="5" placeholder="Cuéntanos tu combinación de sabores o consulta especial" required 
+              pattern=".{10,}" 
+              title="Ingresa al menos 10 caracteres"></textarea>
+
+    <!-- Política de privacidad -->
+    <label>
+      <input type="checkbox" name="privacidad" required> Acepto la Política de Privacidad
+    </label>
+
+    <!-- Botón enviar -->
+    <button type="submit">Solicitar Presupuesto</button>
+  </form>
+</section>
+
+
+
+
+
+
+
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Damascena S.L | Dirección: Calle de Aragón, 183, Barcelona | <a href="#">Aviso legal</a></p>
+  
+  <div class="redes-sociales">
+    <a href="https://facebook.com" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook" width="703" height="703">
+    </a>
+    <a href="https://instagram.com" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" width="132" height="132">
+    </a>
+    <a href="https://twitter.com" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter" width="305" height="251">
+    </a>
+  </div>
+</footer>

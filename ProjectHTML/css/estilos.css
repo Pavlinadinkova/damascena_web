@@ -1,0 +1,603 @@
+/* HEADER */
+.header-fondo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), 
+              url("https://i.pinimg.com/736x/cc/b3/4c/ccb34c73436d3b7a26c8a77e2119dead.jpg") no-repeat center center;
+  background-size: cover;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  height: 120px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo centrado */
+.logo img {
+  width: 120px;
+  height: auto;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+/* Menús */
+.nav-left, .nav-right {
+  display: flex;
+  gap: 20px;
+}
+
+/* Estilo enlaces */
+.header-fondo a {
+  text-decoration: none;
+  color: #333; /* texto oscuro para contraste sobre fondo claro */
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 18px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.7); /* fondo suave y claro */
+  transition: all 0.3s ease;
+}
+
+.header-fondo a:hover {
+  background-color: #ffd1dc; /* rosa suave al pasar el mouse */
+  color: #d6336c; /* texto rosa fuerte */
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Responsive básico */
+@media (max-width: 900px) {
+  .header-fondo {
+    flex-direction: column;
+    height: auto;
+    padding: 15px 20px;
+  }
+  
+  .nav-left, .nav-right {
+    gap: 10px;
+    margin: 5px 0;
+  }
+
+  .logo img {
+    margin: 10px 0;
+  }
+}
+
+
+
+/* HERO */
+.hero {
+  width: 100%;
+  height: 80vh;
+  background-image: url("https://i.pinimg.com/originals/54/84/df/5484df9ba015bf0e4e295a231a8f613b.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+
+.hero-text {
+  position: relative;
+  color: #fff;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+.hero p {
+  font-size: 1.5em;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+/* HISTORIA */
+.historia {
+  width: 100%;
+  padding: 80px 20px;
+  background-image: url("https://i.pinimg.com/originals/54/84/df/5484df9ba015bf0e4e295a231a8f613b.gif");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.historia::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 240, 245, 0.6); /* overlay semitransparente para mejorar lectura */
+  border-radius: 0;
+}
+
+.historia-container {
+  position: relative; /* para estar sobre el overlay */
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.9); /* tarjeta blanca semi-transparente */
+  padding: 50px 40px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  text-align: center;
+  z-index: 1;
+}
+
+.historia-container h2 {
+  font-size: 2.8em;
+  margin-bottom: 30px;
+  color: #d6336c;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.historia-container p {
+  font-size: 1.2em;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+/* SEPARACION ENTRE SECCIONES */
+section {
+  margin-bottom: 50px;
+}
+
+
+
+
+
+
+
+.beneficios {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 50px 20px;
+  background-color: #fff0f5; /* rosa suave */
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+  font-family: 'Georgia', serif;
+  color: #333;
+}
+
+.beneficios h2 {
+  font-size: 2.8em;
+  margin-bottom: 40px;
+  color: #d6336c;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+/* GRID DE TARJETAS */
+.beneficios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* TARJETAS */
+.beneficio-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.beneficio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+/* ICONOS */
+.beneficio-card .icon {
+  font-size: 3em;
+  display: block;
+  margin-bottom: 15px;
+  color: #d6336c;
+}
+
+/* TITULOS DE CADA BENEFICIO */
+.beneficio-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #d6336c;
+}
+
+/* DESCRIPCION */
+.beneficio-card p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #555;
+}
+
+
+
+
+ /* ============================
+       FOOTER
+    ============================ */
+    footer {
+  background-color: #fff0f5; /* rosa suave */
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Georgia', serif;
+  color: #333;
+  border-top: 2px solid #d6336c;
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.05);
+}
+
+footer p {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+footer .redes-sociales {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+footer .redes-sociales a {
+  display: inline-block;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+footer .redes-sociales img {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0.8); /* iconos ligeramente suaves */
+}
+
+footer .redes-sociales a:hover img {
+  transform: scale(1.2);
+  filter: brightness(1);
+}
+
+/* Pequeña nota legal */
+footer small {
+  display: block;
+  margin-top: 15px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+
+
+
+
+/* ============================
+       SECCIÓN PRODUCTOS
+    ============================ */
+
+
+
+
+.productos {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.productos h2 {
+  font-size: 2.8rem;
+  color: #d6336c;
+  margin-bottom: 40px;
+}
+
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.producto-card {
+  background: #edb7c9;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding-bottom: 20px;
+}
+
+.producto-card img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.producto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+}
+
+.producto-card:hover img {
+  transform: scale(1.05);
+}
+
+.producto-card h3 {
+  font-size: 1.5rem;
+  margin: 15px 0 5px;
+  color: #333;
+}
+
+.producto-card p {
+  font-size: 1rem;
+  padding: 0 15px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .producto-card h3 {
+    font-size: 1.3rem;
+  }
+  .producto-card p {
+    font-size: 0.95rem;
+  }
+}
+
+
+
+
+
+
+.ingredientes {
+  max-width: 1000px;       /* un poco más compacto */
+  margin: 60px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;               /* más separación entre tarjetas */
+}
+
+.ingrediente-card {
+  display: flex;
+  align-items: center;
+  gap: 30px;               /* menos espacio entre imagen y texto */
+  flex-wrap: wrap;
+  background: #fff8f8;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1); /* sombra más suave */
+  overflow: hidden;
+  padding: 20px;           /* espacio interno más generoso */
+}
+
+.ingrediente-card img {
+  width: 100%;
+  max-width: 300px;       /* imagen más pequeña */
+  height: 220px;          /* altura reducida para tarjetas más compactas */
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+
+.ingrediente-card:hover img {
+  transform: scale(1.05);
+}
+
+.ingrediente-texto {
+  flex: 1;
+  padding: 10px 20px;    /* más espacio alrededor del texto */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ingrediente-texto h2 {
+  font-size: 1.8rem;     /* ligeramente más pequeño */
+  color: #d6336c;
+  margin-bottom: 12px;
+}
+
+.ingrediente-texto p {
+  font-size: 1rem;       /* texto más compacto */
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ingrediente-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .ingrediente-card img {
+    max-width: 80%;      /* más estrecha en móvil */
+    height: auto;        /* se ajusta proporcionalmente */
+  }
+  .ingrediente-texto {
+    padding: 10px 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* ============================
+       SECCIÓN PRESUPUESTO
+    ============================ */
+   .presupuesto-section {
+  max-width: 700px;
+  margin: 60px auto;
+  background: linear-gradient(135deg, #fff0f5, #ffe4e1);
+  padding: 40px 30px;
+  border-radius: 25px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.presupuesto-section h1 {
+  font-size: 2.5rem;
+  color: #d6336c;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.presupuesto-section p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.presupuesto-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.presupuesto-section input,
+.presupuesto-section textarea {
+  padding: 15px 20px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.presupuesto-section input:focus,
+.presupuesto-section textarea:focus {
+  border-color: #d6336c;
+  box-shadow: 0 0 10px rgba(214, 51, 108, 0.2);
+}
+
+.presupuesto-section label {
+  font-size: 0.9rem;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.presupuesto-section button {
+  padding: 15px 0;
+  border: none;
+  border-radius: 25px;
+  background-color: #d6336c;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.presupuesto-section button:hover {
+  background-color: #b12d5d;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .presupuesto-section {
+    padding: 30px 20px;
+  }
+  .presupuesto-section h1 {
+    font-size: 2rem;
+  }
+}
+
+
+
+
+
+
+/* ============================
+       SECCIÓN CONTACTO
+    ============================ */
+    .contacto-section {
+  max-width: 800px;
+  margin: 60px auto;
+  background: linear-gradient(145deg, #ffffff, #fff0f5); /* degradado suave */
+  padding: 50px 40px;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contacto-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+.contacto-section h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #d6336c; /* color rosa fuerte */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.contacto-section p {
+  font-size: 18px;
+  margin: 12px 0;
+  color: #333;
+}
+
+.contacto-section p::before {
+  content: "📌 "; /* ícono decorativo antes del texto */
+}
+
+.mapa {
+  margin-top: 40px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.mapa iframe {
+  border: 0;
+  border-radius: 20px;
+  transition: transform 0.3s;
+}
+
+.mapa:hover iframe {
+  transform: scale(1.02); /* efecto sutil al pasar el mouse */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contacto-section h1 {
+    font-size: 2.2rem;
+  }
+  .contacto-section p {
+    font-size: 16px;
+  }
+}
+
